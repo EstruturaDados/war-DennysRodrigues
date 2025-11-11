@@ -15,7 +15,7 @@ struct Territorio {
 
 void removerQuebraLinha(char *texto){
     size_t len = strlen(texto);
-    if (len > 0 && texto[len - 1]) == '\n'{
+    if (len > 0 && texto[len - 1] == '\n'){
         texto[len -1] = '\0'
     }
 }
@@ -46,7 +46,7 @@ int main(){
         scanf("%d", &territorios[i].tropas);
         getchar();
         
-        printf("-------------------------------------\n")
+        printf("-------------------------------------\n");
 
     }
 
