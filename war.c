@@ -13,6 +13,13 @@ struct Territorio {
     int tropas;
 };
 
+void removerQuebraLinha(char *texto){
+    size_t len = strlen(texto);
+    if (len > 0 && texto[len - 1]) == '\n'{
+        texto[len -1] = '\0'
+    }
+}
+
 int main(){
 // Vetor de 5 estruturas do tipo Territorio
     struct Territorio territorios[5];
@@ -28,13 +35,16 @@ int main(){
         printf("Cadastro de Território %d\n", i + 1);
 
         printf("Digite o nome do terrirório: ");
-        scanf(" %[^\n]", territorios[i].nome); 
+        fgets(territorios[i].nome, sizeof(territorios[i].nome), stdin);
+        removerQuebraLinha(territorios[i].nome); 
 
         printf("Digite a cor do exército: ");
-        scanf(" %[^\n]", territorios[i].cor);
+        fgets(territorios[i].cor, sizeof(territorios[i].cor), stdin);
+        removerQuebraLinha(territorios[i].cor);
         
         printf("Digite o número de tropas: ");
-        scanf(" %d", &territorios[i].tropas);
+        scanf("%d", &territorios[i].tropas);
+        getchar();
         
         printf("-------------------------------------\n")
     }
