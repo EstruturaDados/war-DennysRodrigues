@@ -47,6 +47,13 @@ int main(){
         getchar();
         
         printf("-------------------------------------\n")
+
     }
+
+
+    // Exibição dos dados
+
+    printf("\n=== Lista de Territórios Cadastrados ===\n");
+    
 }
 
