@@ -54,6 +54,15 @@ int main(){
     // Exibição dos dados
 
     printf("\n=== Lista de Territórios Cadastrados ===\n");
+    for (i = 0; i < 5; i++) {
+        printf("\nTerritório %d:\n", i + 1);
+        printf("Nome: %s\n", territorios[i].nome);
+        printf("Cor do exército: %s\n", territorios[i].cor);
+        printf("Número de tropas: %d\n", territorios[i].tropas);
+   }
+
+   printf("\nCadastro concluído com sucesso!\n");
+   return 0;
     
 }
 
